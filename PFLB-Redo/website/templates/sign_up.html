@@ -1,0 +1,86 @@
+<!--Page that allows people to create an account
+it is set up like this for now because all I want is something that works so I can get sir to check it-->
+<!--link to base document for the title of the page and the header/footer/meta-data-->
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+<div
+  align="center"
+  style="background-image: url({{url_for('static', filename='home_1.jpg')}}); height: 750px; background-size: cover; background-position: center;"
+>
+  <div
+    class="container"
+    style="
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      padding-right: 4rem;
+    "
+  >
+    <div
+      class="container"
+      style="
+        background-color: #343a40;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 25px;
+      "
+    >
+      <form method="POST">
+        <h3 align="center" style="color: rgba(255, 255, 255, 0.5);">Sign Up</h3>
+        <div class="form-group">
+          <label for="email" style="color: rgba(255, 255, 255, 0.5);"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="firstName" style="color: rgba(255, 255, 255, 0.5);"
+            >First Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter first name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password1" style="color: rgba(255, 255, 255, 0.5);"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="password1"
+            name="password1"
+            placeholder="Enter password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2" style="color: rgba(255, 255, 255, 0.5);"
+            >Password (Confirm)</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="password2"
+            name="password2"
+            placeholder="Confirm password"
+          />
+        </div>
+        <br />
+        <div align="center" style="padding-bottom: 2rem;">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

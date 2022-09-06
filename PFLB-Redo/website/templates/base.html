@@ -1,0 +1,174 @@
+<!--Main Document used for code needed for all pages e.g. Header, footer, .css, custom flash messages.-->
+<!--Css has been used throughout these html documents as there were issues with overriding bootstrap formatting-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Linking bootstrap formatting and css-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!--Blocks are used to liknk the django templates together-->
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      body {
+        max-width: 1920px;
+        margin: 0 auto !important;
+        float: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!--This is used to connect to the facebook posts in order to display them on the website.-->
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0"
+      nonce="p6Wu4Eu8"
+    ></script>
+
+    <!--Header-->
+    <nav
+      class="navbar sticky-top navbar-expand-xl navbar-dark bg-dark"
+      style="background-color: #e3f2fd;"
+    >
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <!--Jinja used to change the header depending on if the user is logged in or not.-->
+          {% if user.is_authenticated %}
+          <a class="nav-item nav-logo" id="home" href="/"
+            ><img
+              src="{{url_for('static', filename='PredFree_Lyall Bay LOGO_Lscp_SM.png')}}"
+              alt="PFLB_logo"
+              style="height: 45px;"
+          /></a>
+          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
+          <!--Stats page not being used-->
+          <!--<a class="nav-item nav-link" id="stats" href="/stats">Stats</a>-->
+          <a class="nav-item nav-link" id="gallery" href="/gallery">Gallery</a>
+          <a class="nav-item nav-link" id="profile" href="/profile">Profile</a>
+          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+          {% else %}
+          <a class="nav-item nav-logo" id="home" href="/"
+            ><img
+              src="{{url_for('static', filename='PredFree_Lyall Bay LOGO_Lscp_SM.png')}}"
+              alt="PFLB_logo"
+              style="height: 45px;"
+          /></a>
+          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
+          <!--Stats page not being used-->
+          <!--<a class="nav-item nav-link" id="stats" href="/stats">Stats</a>-->
+          <a class="nav-item nav-link" id="gallery" href="/gallery">Gallery</a>
+          <a class="nav-item nav-link" id="sign_up" href="/sign_up">Sign Up</a>
+          <a class="nav-item nav-link" id="login" href="/login">Login</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    <!--This Jinja shows what kinda of flash to show, e.g. Red for error and green for successful input.-->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <!--Button to get rid of the flash-->
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <!--Button to get rid of the flash-->
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <!--Jinja to link the full content of the page into the base file so that it has all of the relevant addons.-->
+    {% block content %} {% endblock %}
+
+    <!--Code used to add functionality to the flashes and other pages.-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <!--Bootstrap css linking-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Footer-->
+    <footer class="bg-dark text-center text-white" style="padding-top: 10px;">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-2">
+          <!-- Facebook -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.facebook.com/groups/1658407217643448/"
+            role="button"
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+
+          <!-- Gmail -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="mailto:predatorfreelyallbay@gmail.com"
+            role="button"
+            ><i class="fa fa-google"></i
+          ></a>
+        </section>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2);"
+      >
+        © 2022 Copyright:
+        <a class="text-white" href="/">PFLB</a>
+      </div>
+    </footer>
+
+
+    <!-- Modal used for expanding images in the gallery -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="clickClose()">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+  </body>
+</html>

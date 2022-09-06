@@ -1,0 +1,96 @@
+  {% extends "base.html" %} {% block title %}Profile - {{user.first_name}}{% endblock %} 
+  {% block content %}
+
+  <div align="center" style="background-image: url({{url_for('static', filename='home_1.jpg')}}); height: 750px; background-size: cover; background-position: center;">
+    <div class="row" style="padding-top: 100px;">
+      <div class="col-sm-6">
+        <div align="center" class="container" style="background-color: #343a40; width: 500px; min-height: 300px; border-radius: 25px;">
+          <form method="POST">
+            <!--This hidden value allows me to differentiate between the two different forms on this one page-->
+            <input type="hidden" name="form_type" value="trap">
+            <h3 align="center" style="color: rgba(255,255,255,.5);">Add a Trap</h3>
+            <label for="trapID" style="color: rgba(255,255,255,.5);">Trap ID</label>
+            <table>
+              <tr>
+                <td>
+                  <h5 style="color: rgba(255,255,255,.5);">LB:</h5>
+                </td>
+                <td>
+                  <div class="form-group">    
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="trapID"
+                      name="trapID"
+                      placeholder="Enter trap ID e.g. '0000'"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="trap_type"
+                name="trap_type"
+                placeholder="Enter name of trap type e.g. 'Victor'"
+              />
+            </div>
+            <br>
+            <div align="center" style="padding-bottom: 2rem;">
+              <button type="submit" class="btn btn-primary" style="background-color: #FAC710; color: black; border-color: black; height: 50px; width: 150px; font-size: 1.5rem;"><b>Submit<b></button>
+            </div>
+          </form>
+        </div>
+      </div>  
+
+      <div class="col-sm-6">
+        <div align="center" class="container" style="background-color: #343a40; width: 500px; min-height: 300px; border-radius: 25px;">
+          <form method="POST">
+            <!--This hidden value allows me to differentiate between the two different forms on this one page-->
+            <input type="hidden" name="form_type" value="catch">
+            <h3 align="center" style="color: rgba(255,255,255,.5);">Add a Catch</h3>
+            <div class="form-group">
+              <label for="trapID" style="color: rgba(255,255,255,.5);">Trap ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="trapID"
+                name="trapID"
+                placeholder="Enter trap ID e.g. '0000'"
+              />
+            </div>
+            
+            <!--div class="form-group">
+              <label for="species" style="color: rgba(255,255,255,.5);">Species</label>
+              <input
+                type="text"
+                class="form-control"
+                id="species"
+                name="species"
+                placeholder="Enter name of species caught e.g. 'Kiore'"
+              />
+            </div-->
+
+            <div>
+              <label for="species" style="color: rgba(255,255,255,.5);">Species:</label>
+              <select name="species" id="species">
+                <option value="Cat" selected>Cat</option>
+                <option value="Hedgehog">Hedgehog</option>
+                <option value="Rat">Rat</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Hobgoblin">Mikey</option>
+                <option value="Dwarf">Frank</option>
+              </select>
+            </div>
+            <br>
+            <div align="center" style="padding-bottom: 2rem;">
+              <button type="submit" class="btn btn-primary" style="background-color: #FAC710; color: black; border-color: black; height: 50px; width: 150px; font-size: 1.5rem;"><b>Submit<b></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>  
+  </div>
+  {% endblock %}

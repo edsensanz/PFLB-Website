@@ -1,0 +1,196 @@
+<!--jinja to add the base file to the contents of this one-->
+<!--This page has some basic information about PFLB and our team.-->
+{% extends "base.html" %} {% block title %}About{% endblock %} {% block content %}
+<div style="width: 400px; padding-left: 100px; padding-top: 30px;">
+    <h1>Who are we?<hr></h1>
+</div>
+<!--Mono lechuga-->
+<p style="padding-left: 5rem; padding-right: 5rem;"> 
+    En dos semanas, el mono lechuga descenderá sobre el plano mortal y la esparcirá por los numerosos bosques, océanos y desiertos. Pronto usted sentirá la ira de la gran deidad y el mono de lechuga le dará gracia con su bendición, por favor asegúrese de preparar un sacrificio para el día del despertar. 
+</p>
+<!--Simple gallery style cards to display team members-->
+<div style="padding: 25px;">
+    <table align="center">
+        <tr>
+            <td  style="padding: 2.5rem;">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{url_for('static', filename='ian_mikey_photo.jpg')}}" class="card-img-top" alt="traps">
+                    <div class="card-body">
+                        <h5 class="card-title">Ian Mikey</h5>
+                        <p class="card-text">Ian Mikey is one of our hard working community managers. Ian is the welcoming face that every new trapper sees.</p>
+                    </div>
+                  </div>
+
+            </td>
+            <td  style="padding: 2.5rem;">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{url_for('static', filename='ian_mikey_photo.jpg')}}" class="card-img-top" alt="traps">
+                    <div class="card-body">
+                        <h5 class="card-title">Ian Mikey</h5>
+                        <p class="card-text">Ian Mikey is one of our hard working community managers. Ian is the welcoming face that every new trapper sees.</p>
+                    </div>
+                </div>
+            </td>
+            <td  style="padding: 2.5rem;">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{url_for('static', filename='ian_mikey_photo.jpg')}}" class="card-img-top" alt="traps">
+                    <div class="card-body">
+                        <h5 class="card-title">Ian Mikey</h5>
+                        <p class="card-text">Ian Mikey is one of our hard working community managers. Ian is the welcoming face that every new trapper sees.</p>
+                    </div>
+                </div>
+            </td>
+            <td style="padding: 2.5rem;">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{url_for('static', filename='ian_mikey_photo.jpg')}}" class="card-img-top" alt="traps">
+                    <div class="card-body">
+                        <h5 class="card-title">Ian Mikey</h5>
+                        <p class="card-text">Ian Mikey is one of our hard working community managers. Ian is the welcoming face that every new trapper sees.</p>
+                    </div>
+                </div>
+            </td>
+        </tr> 
+    </table>
+</div>
+
+
+<table align="center">
+    <tr>
+        <td>
+            <!--titles with underline-->
+            <div style="width: 400px;">
+                <h1>Where are we?<hr></h1>
+            </div>
+        </td>
+        <td>
+            <div style="width: 400px; padding-left: 1rem;">
+                <h1>How do we do it?<hr></h1>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div>
+                <img src="{{url_for('static', filename='trapping_area.png')}}" class="image" alt="traps" style="border: 1px solid lightgray; border-radius: 5px; width: 610px;">
+            </div>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <!--tiny bit of bootstrap to add more information with images-->
+                        <div style="padding-left: 1rem;"><img src="{{url_for('static', filename='victor-trap.jpeg')}}" class="card-img-top" alt="traps" style="width: 260px; border: 1px solid lightgray; border-radius: 5px;"></div>
+                    </td>
+                    <td>
+                        <div style="border: 1px solid lightgray; border-radius: 5px; max-width: 350px;">
+                            <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px; padding: 5px;"> This is a Victor trap which pacifies the pest via swift strike to the neck. These traps are the most common trap used, they are placed in our rat tunnels pictured below.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="padding: 1rem;"><img src="{{url_for('static', filename='trex-trap.jpeg')}}" class="card-img-top" alt="traps" style="width: 260px; border: 1px solid lightgray; border-radius: 5px;"></div>
+                    </td>
+                    <td>
+                        <div style="border: 1px solid lightgray; border-radius: 5px; max-width: 350px;">
+                            <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px; padding: 5px;">This is a T-Rex trap. This trap snaps shut on the pest and delivers a clean blow to the pests neck pacifiying it imeditely. These traps are less common than the Victor traps due to their high cost, however, we wish to eventually replace all of our Victor traps with this variant.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="padding-left: 1rem; padding-top: 1rem;"><img src="{{url_for('static', filename='traps_tunnels.jpg')}}" class="card-img-top" alt="traps" style="width: 260px; border: 1px solid lightgray; border-radius: 5px;"></div>
+                    </td>
+                    <td>
+                        <div style="border: 1px solid lightgray; border-radius: 5px; max-width: 350px;">
+                            <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px; padding: 5px;">This is a rat tunnel.  This is the facade which covers our traps. You will see these tunnels placed around Lyall Bay. If you see these tunnels please do not touch them for your own safety.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<div class="row" align="center" style="padding-top: 20px;">
+    <div class="col">
+        <div style="width: 400px;">
+            <h2 style="padding:10px;">A short history of PFLB<hr></h2>
+        </div>
+    </div>
+</div>
+
+    <div class="row" align="center" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="col">
+            <div style="border: 1px solid lightgray; border-radius: 5px; max-width: 600px;" >
+                <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px; padding: 5px;">
+                    <!--Mono lechuga-->
+                El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy bien en mi opinion Tom Masters es racismo. Mikey Lemon es muy corto y  E-dog es muy guapo.
+                Plantalla, fresco, chocolate, helado, zumo, verduras y frutas. En la semana pasada mi familia y yo viajamos a la nuestra casa de playa y jugamos voliebol. El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy bien en mi opinion Tom Masters es racismo. Mikey Lemon es muy corto y  E-dog es muy guapo.
+                Plantalla, fresco, chocolate, helado, zumo, verduras y frutas. En la semana pasada mi familia y yo viajamos a la nuestra casa de playa y jugamos voliebol. El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy bien en mi opinion Tom Masters es racismo. Mikey Lemon es muy corto y  E-dog es muy guapo.
+                Plantalla, fresco, chocolate, helado, zumo, verduras y frutas. En la semana pasada mi familia y yo viajamos a la nuestra casa de playa y jugamos voliebol. El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy bien en mi opinion Tom Masters es racismo. Mikey Lemon es muy corto y  E-dog es muy guapo.
+                Plantalla, fresco, chocolate, helado, zumo, verduras y frutas. En la semana pasada mi familia y yo viajamos a la nuestra casa de playa y jugamos voliebol. El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy bien en mi opinion Tom Masters es racismo. Mikey Lemon es muy corto y  E-dog es muy guapo.
+                Plantalla, fresco, chocolate, helado, zumo, verduras y frutas. En la semana pasada mi familia y yo viajamos a la nuestra casa de playa y jugamos voliebol. El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy bien en mi opinion Tom Masters es racismo. Mikey Lemon es muy corto y  E-dog es muy guapo.
+                Plantalla, fresco, chocolate, helado, zumo, verduras y frutas. En la semana pasada mi familia y yo viajamos a la nuestra casa de playa y jugamos voliebol. El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy bien en mi opinion Tom Masters es racismo. Mikey Lemon es muy corto y  E-dog es muy guapo. El mono lechuga biblioteca donde esta la leche... el rato grande es un problemo pero ayudar con tu problemo los huevos son muy
+                
+                
+                
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <div style="padding-left: 1rem;"> 
+            <img src="{{url_for('static', filename='trapping_area.png')}}" class="card-img-top" alt="traps" style="width: 610px; border: 1px solid lightgray; border-radius: 5px;"> 
+            </div>      
+        </div>
+    </div>
+
+<div class="row" align="center" style="padding-top : 2rem; padding-bottom : 2rem;">
+    <div class="col">
+        <div style="width: 400px;">
+            <h1>Want to help out?<hr></h1>
+            <a href="mailto:predatorfreelyallbay@gmail.com">
+                <h4>
+                    predatorfreelyallbay@gmail.com
+                </h4>
+            </a>
+
+        </div>
+        <div style="width: 400px;">
+            <br>
+            <h1>Socials:<hr></h1>
+        </div>
+        <div>
+            <!--buttons to redirect to social medias-->
+            <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/pattonoswalt/" role="button"><i class=" fa fa-3x fa-instagram"></i></a>
+            <a class="btn btn-outline-dark btn-floating m-1" href="https://www.facebook.com/groups/1658407217643448/" role="button"><i class=" fa fa-3x fa-facebook"></i></a>
+        </div>
+    </div>
+    <div class="col">
+        <div style="width: 400px;">
+            <h1>Newsletter<hr></h1>
+        </div>
+        <div class="container p-0 pb-0" style="background-color: #2D9BF0; border: 2px solid rgb(0, 0, 0); border-radius: 5px; min-height: 500px;  max-width: 400px;">
+            <!--form to gather email address for a mailing list-->
+            <form method="POST" style="padding: 15px;">
+                <h1 style="color: rgba(0, 0, 0);">SIGN UP NOW</h1>
+                <h3 style="color: rgba(0, 0, 0);">Sign up to our monthly newsletter to recieve updates about upcoming community events and exclusive indepth statistics.</h1>
+                <div class="form-group">
+                    <br>
+                    <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email"
+                    style="border: 2px solid rgb(0, 0, 0);"
+                    />
+                </div> 
+                <br><br>
+                <button type="submit" class="btn btn-primary" style="background-color: #FAC710; color: black; border-color: black; height: 75px; width: 175px; font-size: 2rem; font-family: 'Times New Roman', Times, serif;"><b>Sign Up<b></button>
+            </form>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

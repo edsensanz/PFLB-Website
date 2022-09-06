@@ -1,0 +1,299 @@
+<!--This is the home page that users will be greeted with when they first open the website.-->
+<!--Javascript linking back to base to set the title and add this content to the header and footer.-->
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<!--Splash image to make the home screen look nicer-->
+<div
+  align="center"
+  style="background-image: url({{url_for('static', filename='home_1.jpg')}}); height: 400px; background-size: cover; background-position: center; box-shadow: 0px 5px 10px black;"
+>
+<!--PFLB logo and initials-->
+  <img
+    src="{{url_for('static', filename='PFLBlogo_azul.png')}}"
+    style="height: 220px; padding-top: 50px;"
+  />
+  <p
+    style="
+      font-family: Monospace, serif;
+      color: rgb(79, 141, 202);
+      font-size: 40px;
+      text-shadow: 0px 2px 5px black;
+    "
+  >
+    P.F.L.B.
+  </p>
+  <br />
+  <p
+    style="
+      font-family: Monospace, serif;
+      color: rgb(79, 141, 202);
+      font-size: 25px;
+    "
+  >
+  <!--Fake slogna that sounds really good (ty frank)-->
+    Protecting our little slice of paradise from ghosts and ghoulies since 1998
+  </p>
+</div>
+
+<!--Main content-->
+<div
+  class="row"
+  align="center"
+  style="padding-top: 20px; padding-bottom: 20px;"
+>
+<!--title for the section-->
+  <div class="col">
+    <div style="width: 400px;">
+      <h2 style="padding: 10px;">
+        What do we do?
+        <hr />
+      </h2>
+    </div>
+    <div style="width: 600px; border: 1px solid lightgray; border-radius: 5px;">
+      <!--image to split up the text a bit-->
+      <img
+        src="{{url_for('static', filename='Traps on the coast.jpg')}}"
+        alt="trapping_location"
+        style="
+          width: 500px;
+          max-height: 250px;
+          padding: 10px;
+          object-fit: cover;
+        "
+      />
+      <p style="padding: 10px;">
+        <!--Custom made lorem ipsum called mono lechuga probably wont replace with actualy text will just leave it for now-->
+        En dos semanas, el mono lechuga descenderá sobre el plano mortal y la
+        esparcirá por los numerosos bosques, océanos y desiertos. Pronto usted
+        sentirá la ira de la gran deidad y el mono de lechuga le dará gracia con
+        su bendición, por favor asegúrese de preparar un sacrificio para el día
+        del despertar. En dos semanas, el mono lechuga descenderá sobre el plano
+        mortal y la esparcirá por los numerosos bosques, océanos y desiertos.
+        Pronto usted sentirá la ira de la gran deidad y el mono de lechuga le
+        dará gracia con su bendición, por favor asegúrese de preparar un
+        sacrificio para el día del despertar. En dos semanas, el mono lechuga
+        descenderá sobre el plano mortal y la esparcirá por los numerosos
+        bosques, océanos y desiertos. Pronto usted sentirá la ira de la gran
+        deidad y el mono de lechuga le dará gracia con su bendición, por favor
+        asegúrese de preparar un sacrificio para el día del despertar. En dos
+        semanas, el mono lechuga descenderá sobre el plano mortal y la esparcirá
+        por los numerosos bosques, océanos y desiertos. Pronto usted sentirá la
+        ira de la gran deidad y el mono de lechuga le dará gracia con su
+        bendición, por favor asegúrese de preparar un sacrificio para el día del
+        despertar. En dos semanas, el mono lechuga descenderá sobre el plano
+        mortal y la esparcirá por los numerosos bosques, océanos y desiertos.
+        Pronto usted sentirá la ira de la gran deidad y el mono de lechuga le
+        dará gracia con su bendición, por favor asegúrese de preparar un
+        sacrificio para el día del despertar. En dos semanas, el mono lechuga
+        descenderá sobre el plano mortal
+      </p>
+    </div>
+  </div>
+  <div class="col">
+    <!--title for the section-->
+    <div style="width: 400px; border-radius: 10px;">
+      <h2 style="padding: 10px;">
+        Where can you find us?
+        <hr />
+      </h2>
+    </div>
+    <!--image that would normally go with the text but mono lechuga-->
+    <img
+      src="{{url_for('static', filename='trapping_area.png')}}"
+      alt="trapping_location"
+      style="width: 400px; border-radius: 10px;"
+    />
+  </div>
+</div>
+<div align="center">
+  <!--title for the section-->
+  <div style="width: 400px; border-radius: 10px;">
+    <h2 style="padding: 10px;">
+      Look at us at work!
+      <hr />
+    </h2>
+  </div>
+  <table>
+    <tr align="center">
+      <td style="padding: 10px;">
+        <!--Basic boot strap cards to display some images with breif description of what they show-->
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='ian_mikey_photo.jpg')}}"
+            class="card-img-top"
+            alt="ian"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Mikey Lemon</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='ian_pflb_team.jpg')}}"
+            class="card-img-top"
+            alt="e-dog"
+            style="max-height: 18rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Lemon Family & Cam</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='Parrotdog Trap painting 1.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 18rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trap Painting Event</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='Parrotdog Trap painting 2.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 18rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trap Painting Event</h5>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='community_1.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 18rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trap Building Event</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='community_2.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 18rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trap Building Event</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='community_3.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 18rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trap Building Event</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{url_for('static', filename='community_4.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 18rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trap Building Event</h5>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td align="center">
+        <!--title for the section-->
+        <div style="width: 400px; border-radius: 10px;">
+          <h2 style="padding: 10px;">
+            Facebook
+            <hr />
+          </h2>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="row">
+          <!--Facebook posts from the PFLB page added in using the facebook api-->
+          <div class="column" style="padding: 0 30px 30px;">
+            <!--call up the post in question-->
+            <div
+              class="fb-post"
+              data-href="https://www.facebook.com/photo/?fbid=10159754204644185&amp;set=gm.2273582752792555"
+              data-width="600"
+              data-show-text="true"
+            >
+              <blockquote
+                cite="https://www.facebook.com/photo.php?fbid=10159754204644185&amp;set=gm.2273582752792555&amp;type=3"
+                class="fb-xfbml-parse-ignore"
+              >
+              <!--show a little bit of the text in the post-->
+                <p>
+                  Just like groceries, our building supplies we use to build
+                  tunnels have gone up in price. It has increased by...
+                </p>
+                Posted by
+                <!--link to the actual post-->
+                <a href="#" role="button">Michelle Wilhelm</a> on&nbsp;<a
+                  href="https://www.facebook.com/photo.php?fbid=10159754204644185&amp;set=gm.2273582752792555&amp;type=3"
+                  >Tuesday, 14 June 2022</a
+                >
+              </blockquote>
+            </div>
+          </div>
+          <div class="column" style="padding: 0 30px 30px;">
+            <!--call up the post in question-->
+            <div
+              class="fb-post"
+              data-href="https://www.facebook.com/photo/?fbid=10159729082734185&amp;set=gm.2262076433943187"
+              data-width="600"
+              data-show-text="true"
+            >
+              <blockquote
+                cite="https://www.facebook.com/photo.php?fbid=10159729082734185&amp;set=gm.2262076433943187&amp;type=3"
+                class="fb-xfbml-parse-ignore"
+              >
+              <!--start of the text from the post-->
+                <p>
+                  It’s getting ratty out there again. Congratulations to all
+                  those members who logged a catch this week. We love reading...
+                </p>
+                Posted by
+                <!--link to the post in question-->
+                <a href="#" role="button">Michelle Wilhelm</a> on&nbsp;<a
+                  href="https://www.facebook.com/photo.php?fbid=10159729082734185&amp;set=gm.2262076433943187&amp;type=3"
+                  >Monday, 30 May 2022</a
+                >
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

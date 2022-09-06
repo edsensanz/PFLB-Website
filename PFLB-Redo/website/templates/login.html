@@ -1,0 +1,76 @@
+<!--JS to add the base file to the contents of this file-->
+<!--This is the login page that people will access their own traps to log catches-->
+<!--jinja to link to base document giving the title of the page the header/footer and any metadata-->
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content%}
+<div class="row">
+  <div class="col" style="padding: 2rem; background-color: white;">
+    <!--image so that the page isnt all just white and input boxes-->
+    <img
+      src="{{url_for('static', filename='Traps on the coast.jpg')}}"
+      alt="traps"
+      style="height: 670px; border: 5px solid #4d5359; border-radius: 25px;"
+    />
+  </div>
+  <div
+    class="col"
+    style="
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      padding-right: 4rem;
+      background-color: white;
+    "
+  >
+  <!--top tier webpage design using line breaks :)-->
+    <br /><br /><br /><br /><br /><br /><br />
+    
+    <div
+      class="container"
+      style="
+        background-color: #343a40;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 25px;
+      "
+    >
+      <!--Form for sending information to the database and checking to see if the login exists-->
+      <form method="POST" style="padding: 15px;">
+        <!--title of the form-->
+        <h3 align="center" style="color: rgba(255, 255, 255, 0.5);">Login</h3>
+        <!--email address input-->
+        <div class="form-group">
+          <label for="email" style="color: rgba(255, 255, 255, 0.5);"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <!--password input-->
+        <div class="form-group">
+          <label for="password" style="color: rgba(255, 255, 255, 0.5);"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <br />
+        <div align="center">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

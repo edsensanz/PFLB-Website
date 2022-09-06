@@ -1,0 +1,235 @@
+<!--Simple page to display all photos used on the site-->
+<!--Java Scipt link the template pages together-->
+{% extends "base.html" %} {% block title %}Gallery{% endblock %} {% block
+content %}
+
+<!--Title with underline-->
+<div style="width: 400px; padding-left: 100px; padding-top: 30px;">
+  <h1>
+    Watch us at work!
+    <hr />
+  </h1>
+</div>
+<div style="padding: 25px;">
+  <!--table of bootstrap cards with title explaining image-->
+  <table align="center">
+    <tr>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='community_1.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Community Trappers</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='community_2.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Community Trappers</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='community_3.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Community Trappers</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='community_4.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Community Trappers</h5>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='home_1.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Lyall Bay</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='ian_mikey_photo.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Ian Mikey</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='ian_pflb_team.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Ian Lemon Family</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='no bitches?.JPG')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Elijah Lemon</h5>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='Parrotdog Trap painting 1.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Community Event</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='Parrotdog Trap painting 2.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Community Event</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='Traps on the coast.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem; object-fit: cover;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trapping Tunnels</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='traps_tunnels.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Trapping Tunnels</h5>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='trex-trap.jpeg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">T-rex Trap</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='victor-trap.jpeg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Victor Trap</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='ian_mikey_photo.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Ian Mikey</h5>
+          </div>
+        </div>
+      </td>
+      <td style="padding: 2rem;">
+        <div class="card" style="width: 16rem;">
+          <img
+            src="{{url_for('static', filename='ian_mikey_photo.jpg')}}"
+            class="card-img-top"
+            alt="traps"
+            style="height: 16rem;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Ian Mikey</h5>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+{% endblock %}
