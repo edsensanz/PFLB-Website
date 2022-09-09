@@ -8,3 +8,5 @@ where the ... is replaced with the directory of the PFLB-Redo file.
 This will start a server running on the ip 127.0.0.1:5000 where if you type that into your browser while it is running the website will show.
 
 If you encounter any problems running or accessing the code let me know.
+
+Additionally any feedback of anything I could add to the functionality right now would be great.
