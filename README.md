@@ -12,3 +12,7 @@ I have been using the anaconda interface in order to edit and delete any informa
 If you encounter any problems running or accessing the code let me know.
 
 Additionally any feedback of anything I could add to the functionality right now would be great.
+
+
+A clear instruction README.  Very encouraging to see the use of markdown.
+EMP
