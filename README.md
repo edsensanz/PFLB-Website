@@ -6,6 +6,8 @@ To run the website open up your terminal or windows command prompt (depending or
 -> python .../PFLB-Redo/main.py
 where the ... is replaced with the directory of the PFLB-Redo file.
 This will start a server running on the ip 127.0.0.1:5000 where if you type that into your browser while it is running the website will show.
+I have been using the anaconda interface in order to edit and delete any information stored inside the database, however, any other interface program would work.
+
 
 If you encounter any problems running or accessing the code let me know.
 
